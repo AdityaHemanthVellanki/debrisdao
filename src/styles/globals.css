@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --space-navy: #0B1A2F;
+  --neon-cyan: #00FFC6;
+  --solar-orange: #FF7F11;
+}
+
+body {
+  background-color: var(--space-navy);
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-neon-cyan text-space-navy font-bold py-2 px-6 rounded-md hover:bg-opacity-80 transition-all duration-200 font-orbitron;
+  }
+  
+  .btn-secondary {
+    @apply bg-solar-orange text-white font-bold py-2 px-6 rounded-md hover:bg-opacity-80 transition-all duration-200 font-orbitron;
+  }
+
+  .nav-link {
+    @apply font-orbitron font-medium hover:text-neon-cyan transition-colors;
+  }
+  
+  .card {
+    @apply bg-space-navy border border-neon-cyan rounded-lg p-4 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-neon-cyan/20;
+  }
+  
+  .satellite-loader {
+    @apply animate-spin text-neon-cyan;
+  }
+}
