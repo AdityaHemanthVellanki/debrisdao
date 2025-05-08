@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../utils/motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
@@ -97,9 +97,12 @@ function MiniOrbiter({ debris }: { debris: any }) {
     };
     
     return (
-      <line ref={pathRef}>
-        <lineBasicMaterial color={getColor()} opacity={0.7} transparent={true} />
-      </line>
+      <group>
+        <primitive object={new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints([]),
+          new THREE.LineBasicMaterial({ color: getColor(), opacity: 0.7, transparent: true })
+        )} ref={pathRef} />
+      </group>
     );
   };
   

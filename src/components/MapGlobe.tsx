@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Stars, OrbitControls, Text } from '@react-three/drei';
 import * as THREE from 'three';
-import { motion } from 'framer-motion';
+import { motion } from '../utils/motion';
 
 // Mock debris data for the globe
 const DEBRIS_DATA = Array.from({ length: 75 }, (_, i) => ({
@@ -151,14 +151,19 @@ function Debris({ debris, onClick }: { debris: any; onClick: (debris: any) => vo
   return (
     <>
       {/* Orbit path */}
-      <line ref={orbitRef}>
-        <bufferGeometry />
-        <lineBasicMaterial 
-          color={getColor()} 
-          transparent 
-          opacity={hovered ? 0.4 : 0.1}
-        />
-      </line>
+      <group>
+        <primitive object={new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints([]),
+          new THREE.LineDashedMaterial({ 
+            color: getColor(), 
+            opacity: hovered ? 0.4 : 0.1, 
+            transparent: true,
+            dashSize: 0.05,
+            gapSize: 0.05,
+            scale: 1
+          })
+        )} ref={orbitRef} />
+      </group>
       
       {/* Debris object */}
       <mesh 
