@@ -168,10 +168,10 @@ const AboutClient = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
-              { name: 'Alex Chen', role: 'Founder & CEO', bg: 'from-neon-cyan/20 to-space-navy/60' },
-              { name: 'Dr. Sarah Miller', role: 'Orbital Mechanics Lead', bg: 'from-neon-cyan/20 to-space-navy/60' },
-              { name: 'Marcus Johnson', role: 'Blockchain Architect', bg: 'from-neon-cyan/20 to-space-navy/60' },
-              { name: 'Elena Kowalski', role: 'Risk Modeling Specialist', bg: 'from-neon-cyan/20 to-space-navy/60' },
+              { name: 'Aditya Vellanki', role: 'Co-Founder', bg: 'from-neon-cyan/20 to-space-navy/60' },
+              { name: 'Himaneesh Sompalle', role: 'Co-Founder', bg: 'from-neon-cyan/20 to-space-navy/60' },
+              { name: 'Vipran Vasan', role: 'Co-Founder', bg: 'from-neon-cyan/20 to-space-navy/60' },
+              { name: 'Madhav Saravanan', role: 'Co-Founder', bg: 'from-neon-cyan/20 to-space-navy/60' },
             ].map((member, index) => (
               <div 
                 key={index}

@@ -15,28 +15,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm mt-2">Turn Space Junk into Opportunity</p>
           </div>
           
-          <div className="flex space-x-8 mb-6 md:mb-0">
-            <div className="flex flex-col space-y-2">
-              <h3 className="font-orbitron text-solar-orange text-sm mb-2">Resources</h3>
-              <Link href="/whitepaper.pdf" className="text-gray-400 hover:text-neon-cyan text-sm">Whitepaper</Link>
-              <Link href="https://github.com/debrisdao" className="text-gray-400 hover:text-neon-cyan text-sm">GitHub</Link>
-              <Link href="/faq" className="text-gray-400 hover:text-neon-cyan text-sm">FAQ</Link>
-            </div>
-            
-            <div className="flex flex-col space-y-2">
-              <h3 className="font-orbitron text-solar-orange text-sm mb-2">Community</h3>
-              <Link href="https://twitter.com/debrisdao" className="text-gray-400 hover:text-neon-cyan text-sm">Twitter</Link>
-              <Link href="https://discord.gg/debrisdao" className="text-gray-400 hover:text-neon-cyan text-sm">Discord</Link>
-              <Link href="/blog" className="text-gray-400 hover:text-neon-cyan text-sm">Blog</Link>
-            </div>
-            
-            <div className="flex flex-col space-y-2">
-              <h3 className="font-orbitron text-solar-orange text-sm mb-2">Legal</h3>
-              <Link href="/terms" className="text-gray-400 hover:text-neon-cyan text-sm">Terms</Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-neon-cyan text-sm">Privacy</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-neon-cyan text-sm">Contact</Link>
-            </div>
-          </div>
+          {/* Footer links removed */}
         </div>
         
         <div className="mt-8 border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
